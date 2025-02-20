@@ -19,3 +19,16 @@ class Resort(models.Model):
     
     def get_absolute_url(self):
         return reverse('resort-detail', kwargs={'resort_id': self.id})
+    
+
+class Date(models.Model):
+    date = models.DateField()
+    guest = models.CharField(max_length=100)  
+
+    resort = models.ForeignKey(Resort, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.company} - {self.date}"
+
+
+
