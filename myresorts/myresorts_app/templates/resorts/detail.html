@@ -17,6 +17,10 @@
     <p>🏠 Address: {{ resort.address }}</p>
     <p>🎟️ Lift Ticket Type: <strong>{{ resort.lift_ticket }}</strong></p>
   </div>
+  <div class="resort-actions">
+    <a href="{% url 'resort-update' resort.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'resort-delete' resort.id %}" class="btn danger">Delete</a>
+  </div>
 </section>
 {% endblock %}
 
