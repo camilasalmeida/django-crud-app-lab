@@ -7,6 +7,7 @@ urlpatterns = [
     path('resorts/', views.resort_index, name='resort-index'),
 
      path('resorts/<int:resort_id>/', views.resort_detail, name='resort-detail'),
+     path('resorts/create/', views.ResortCreate.as_view(), name='resort-create'),
 
 ]
 
