@@ -21,6 +21,34 @@
     <a href="{% url 'resort-update' resort.id %}" class="btn warn">Edit</a>
     <a href="{% url 'resort-delete' resort.id %}" class="btn danger">Delete</a>
   </div>
+
+
+
+
+<!-- Existing resort-container above -->
+<div class="trips-container">
+    <section class="trips">
+      <div class="subsection-title">
+        <h2>Trips</h2>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Guest</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for trip in resort.trip_set.all %}
+            <tr>
+              <td>{{ trip.trip_date }}</td>
+              <td>{{ trip.guest_name }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </div>  
 </section>
 {% endblock %}
 
