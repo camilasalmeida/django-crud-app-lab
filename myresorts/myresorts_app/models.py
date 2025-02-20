@@ -6,7 +6,7 @@ class Resort(models.Model):
         ('Epic Pass', 'Epic Pass'),
         ('Day Lift Ticket', 'Day Lift Ticket'),
     ]
-    
+
     name = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
     state = models.CharField(max_length=100)  
@@ -15,3 +15,5 @@ class Resort(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.country})"
+    
+    

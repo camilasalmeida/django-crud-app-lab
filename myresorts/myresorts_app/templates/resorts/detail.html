@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/resorts/resort-detail.css' %}" />
+{% endblock %} 
+
+{% block content %}
+<section class="resort-container">
+  <div class="resort-img">
+    <img src="https://publish.purewow.net/wp-content/uploads/sites/2/2019/12/best-ski-resorts-in-the-world-whistler.jpg?fit=728%2C524" 
+         alt="Whistler Blackcomb Resort" width="728" height="524">
+  </div>
+  <div class="resort-details">
+    <h1>{{ resort.name }}</h1>
+    <h2>📍 Located in {{ resort.state }}, {{ resort.country }}</h2>
+    <p>🏠 Address: {{ resort.address }}</p>
+    <p>🎟️ Lift Ticket Type: <strong>{{ resort.lift_ticket }}</strong></p>
+  </div>
+</section>
+{% endblock %}
+
+

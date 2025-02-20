@@ -10,13 +10,14 @@
 {% block content %}
 
 <section class="page-header">
-  <h1>Ski Resort List</h1>
+  <h1>Ski Resort Collection</h1>
 </section>
 
 <section class="card-container">
   {% for resort in resorts %}
     <div class="card">
       <div class="card-content">
+        <a href="{% url 'resort-detail' resort.id %}">
         <h2 class="card-title">{{ resort.name }}</h2>
         <p>📍 {{ resort.state }}, {{ resort.country }}</p>
         <p>🎟️ Lift Ticket: <strong>{{ resort.lift_ticket }}</strong></p>

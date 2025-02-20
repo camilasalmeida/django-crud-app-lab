@@ -6,5 +6,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('resorts/', views.resort_index, name='resort-index'),
 
+     path('resorts/<int:resort_id>/', views.resort_detail, name='resort-detail'),
+
 ]
 

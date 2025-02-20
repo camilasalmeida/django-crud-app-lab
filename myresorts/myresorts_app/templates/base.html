@@ -11,14 +11,16 @@
     {% block head %} 
     {% endblock %}
   </head>
+
+
   <body>
     <header>
       <div class="header-logo-container">
       </div>
       <nav>
         <ul>
-            <li><a href="/resorts">All Resorts</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="{% url 'resort-index' %}">All Resorts</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
         </ul>
       </nav>
     </header>
