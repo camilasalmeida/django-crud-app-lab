@@ -17,7 +17,11 @@
   <h1>Ski Resort Collection</h1>
 </section>
 
+
 <section class="card-container">
+    {% if not albums %}
+    <h1>Please add your first resort 🏔️.</h1>
+  {% else %}
   {% for resort in resorts %}
     <div class="card">
       <div class="card-content">
@@ -29,6 +33,7 @@
       </div>
     </div>
   {% endfor %}
+{% endif %}
 </section>
 
 {% endblock %}
