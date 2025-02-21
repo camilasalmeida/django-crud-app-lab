@@ -1,12 +1,19 @@
 {% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %} 
+
 {% block content %}
-
-
-
-
 <h1>About the MyResorts App</h1>
+
+<div class="tree-img">
+    <img src="https://www.telegraph.co.uk/content/dam/travel/2023/11/08/TELEMMGLPICT000355951968_16994386888420_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf0Rf_Wk3V23H2268P_XkPxc.jpeg?imwidth=680" 
+         alt="Whistler Blackcomb Resort" width="728" height="524">
+</div>
+
 <p class="page-content">
     MyResorts App is designed for ski and snowboard enthusiasts who want to explore, track, and plan their next adventure in the mountains. Whether you're a beginner looking for family-friendly slopes or an expert searching for extreme backcountry terrain, this app helps you find the perfect destination.
 </p>
 {% endblock %}
-

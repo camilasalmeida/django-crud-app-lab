@@ -21,14 +21,14 @@ class Resort(models.Model):
         return reverse('resort-detail', kwargs={'resort_id': self.id})
     
 
-class Date(models.Model):
+class Trip(models.Model):
     date = models.DateField()
-    guest = models.CharField(max_length=100)  
+    buddy = models.CharField(max_length=100)  
 
     resort = models.ForeignKey(Resort, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.company} - {self.date}"
+        return f"{self.buddy} - {self.date}"
 
 
 
