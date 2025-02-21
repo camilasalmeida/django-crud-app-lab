@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+  <h2>Login</h2>
+  <div class="header">
+    <img src="https://skinorthamerica100.com/wp-content/uploads/2013/03/heavenly.jpg0" 
+    alt="Whistler Blackcomb Resort" width="728" height="524">
+</div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}
