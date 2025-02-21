@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+{% comment %} <link rel="stylesheet" href="{% static 'css/trips/trip-form.css' %}" /> {% endcomment %}
+
+  </div>
+  <div class="form-container">
+   <form action="" method="post" autocomplete="off" class="album-form"><div>
+      <div class="form-header">
+      {% if object %}
+         <h1>Edit your Trip</h1>
+      {% else %}
+         <h1>New Trip</h1>
+      {% endif %}
+      <hr>
+  </div>
+    {% csrf_token %}
+    <table class="form-fields">
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+</div>
+
+{% endblock %}

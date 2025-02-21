@@ -33,10 +33,14 @@
     </thead>
     <tbody>
       {% for trip in trips %}
-        <tr> 
-          <td>{{ trip.date|date:"F d, Y" }}</td> 
-          <td>{{ trip.buddy }}</td>  
-        </tr>
+      <tr> 
+        <td>{{ trip.date|date:"F d, Y" }}</td> 
+        <td>{{ trip.buddy }}</td>  
+        <td>
+          <a href="{% url 'trip-update' trip.id %}" class="edit-link">Edit</a>
+          <a href="{% url 'trip-delete' trip.id %}" class="delete-link">Delete</a>
+        </td>
+      </tr>
       {% empty %}
         <tr>
           <td colspan="2">No trips planned yet.</td>
