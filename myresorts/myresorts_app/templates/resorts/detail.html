@@ -12,7 +12,7 @@
          alt="Whistler Blackcomb Resort" width="728" height="524">
   </div>
   <div class="resort-details">
-    <h1>{{ resort.name }}</h1>
+    <h1>{{ resort.name|upper }}</h1>
     <h2>📍 Located in {{ resort.state }}, {{ resort.country }}</h2>
     <p>🏠 Address: {{ resort.address }}</p>
     <p>🎟️ Lift Ticket Type: <strong>{{ resort.lift_ticket }}</strong></p>
@@ -21,11 +21,12 @@
     <a href="{% url 'resort-update' resort.id %}" class="btn warn">Edit</a>
     <a href="{% url 'resort-delete' resort.id %}" class="btn danger">Delete</a>
   </div>
-
-
-
-
-  <h3>Planned Trips:</h3>
+</br>
+  <div class="resort-img">
+    <img src="https://fasterskier.com/wp-content/blogs.dir/1/files/2019/03/C38I5662-e1552763698186.jpg" 
+         alt="Whistler Blackcomb Resort" width="400" height="300">
+  </div>
+  <h2>Planned Trips:</h2>
   <table border="1">
     <thead>
       <tr>
@@ -51,12 +52,13 @@
     </tbody>
   </table>
   
-  <h3>Planning your Trip:</h3>
+  <h2>Planning your Trip:</h2>
   <form action="{% url 'add-trip' resort.id %}" method="post" class="subsection-content" autocomplete="off">
     {% csrf_token %} 
     {{ trip_form.as_p }}
     <button type="submit" class="btn submit">Add Trip</button>
   </form>
+
 
 {% endblock %}
 
